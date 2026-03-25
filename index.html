@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ROBCO INDUSTRIES — MITRA.KERMANIAN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ═══════════════ BOOT SCREEN ═══════════════ -->
+  <div id="bootScreen">
+    <div class="boot-logo">ROBCO INDUSTRIES™</div>
+    <div class="boot-sub">UNIFIED OPERATING SYSTEM — COPYRIGHT 2075-2077</div>
+    <div class="boot-log" id="bootLog">
+      <p>Initializing terminal hardware...</p>
+      <p>Loading BIOS v2.3.0...</p>
+      <p>Memory check: 640K OK</p>
+      <p>Scanning I/O devices...</p>
+      <p>Loading MITRA.KERMANIAN profile database...</p>
+      <p>AI_NATIVE module detected...</p>
+      <p>Decrypting personnel file... AUTHORIZED</p>
+      <p>Welcome back, Overseer.</p>
+    </div>
+    <div class="boot-progress">
+      <div class="boot-progress-fill" id="bootFill"></div>
+    </div>
+    <button class="boot-enter-btn" id="bootEnter" onclick="enterTerminal()">ENTER TERMINAL</button>
+  </div>
+
+  <!-- ═══════════════ MAIN TERMINAL ═══════════════ -->
+  <div class="terminal-wrap" id="terminalWrap" style="display:none">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-logo">ROBCO<span>://</span>MK.TERMINAL</div>
+      <ul class="nav-links">
+        <li><a href="#about">DOSSIER</a></li>
+        <li><a href="#skills">SPECIAL</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-fade"></div>
+
+      <!-- Floating AI Orbs -->
+      <div class="ai-orbs" id="aiOrbs">
+        <div class="ai-orb" data-depth="0.08" style="top:12%;left:7%">
+          <div class="orb-inner">
+            <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#10a37f"/><circle cx="27" cy="27" r="15" fill="none" stroke="white" stroke-width="3"/><circle cx="27" cy="27" r="6" fill="white"/></svg>
+            <span>ChatGPT</span>
+          </div>
+        </div>
+        <div class="ai-orb" data-depth="0.05" style="top:7%;left:47%">
+          <div class="orb-inner">
+            <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#1a1a2e"/><text x="27" y="36" text-anchor="middle" font-size="24" font-weight="900" fill="#4285f4" font-family="sans-serif">G</text></svg>
+            <span>Gemini</span>
+          </div>
+        </div>
+        <div class="ai-orb" data-depth="0.10" style="top:9%;right:8%">
+          <div class="orb-inner">
+            <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#cc785c"/><text x="27" y="37" text-anchor="middle" font-size="26" font-weight="900" fill="white" font-family="Georgia,serif">C</text></svg>
+            <span>Claude</span>
+          </div>
+        </div>
+        <div class="ai-orb" data-depth="0.06" style="top:50%;left:3%">
+          <div class="orb-inner">
+            <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#7c3aed"/><text x="27" y="37" text-anchor="middle" font-size="24" font-weight="900" fill="white" font-family="serif">π</text></svg>
+            <span>Pi</span>
+          </div>
+        </div>
+        <div class="ai-orb" data-depth="0.09" style="bottom:15%;left:9%">
+          <div class="orb-inner">
+            <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#1565c0"/><text x="27" y="31" text-anchor="middle" font-size="10" font-weight="900" fill="white" font-family="sans-serif">LLaMA</text></svg>
+            <span>LLaMA</span>
+          </div>
+        </div>
+        <div class="ai-orb" data-depth="0.07" style="bottom:19%;left:41%">
+          <div class="orb-inner">
+            <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#0078d4"/><text x="27" y="31" text-anchor="middle" font-size="9.5" font-weight="900" fill="white" font-family="sans-serif">Copilot</text></svg>
+            <span>Copilot</span>
+          </div>
+        </div>
+        <div class="ai-orb" data-depth="0.05" style="top:38%;right:4%">
+          <div class="orb-inner">
+            <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#00bcd4"/><text x="27" y="32" text-anchor="middle" font-size="12" font-weight="900" fill="white" font-family="sans-serif">Alexa</text></svg>
+            <span>Alexa</span>
+          </div>
+        </div>
+        <div class="ai-orb" data-depth="0.08" style="bottom:11%;right:8%">
+          <div class="orb-inner">
+            <svg width="54" height="54" viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#a855f7"/><text x="27" y="32" text-anchor="middle" font-size="13" font-weight="900" fill="white" font-family="sans-serif">Siri</text></svg>
+            <span>Siri</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="terminal-header">ROBCO INDUSTRIES — PERSONNEL FILE <span>// ACTIVE</span></div>
+        <div class="hero-name">MITRA KERMANIAN</div>
+        <div class="hero-rank">▶ AI NATIVE ◀</div>
+        <div class="hero-divider"></div>
+        <p class="hero-bio">First-generation developer. Building tools that make everyday life easier — one line of code at a time. Currently enrolled in Pursuit Fellowship, New York City.</p>
+        <div class="hero-stats">
+          <div class="stat-box"><div class="stat-label">LOCATION</div><div class="stat-val">NYC</div></div>
+          <div class="stat-box"><div class="stat-label">PROGRAM</div><div class="stat-val">PURSUIT</div></div>
+          <div class="stat-box"><div class="stat-label">CLASS</div><div class="stat-val">AI NATIVE</div></div>
+          <div class="stat-box"><div class="stat-label">STATUS</div><div class="stat-val" style="color:var(--amber)">SEEKING</div></div>
+        </div>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-terminal primary">VIEW WORK</a>
+          <a href="#contact" class="btn-terminal">TRANSMIT MSG</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / DOSSIER -->
+    <section class="section reveal" id="about">
+      <div class="container">
+        <div class="section-id">// FILE_001</div>
+        <div class="section-title">DOSSIER</div>
+        <div class="section-rule"></div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>First-generation developer passionate about building tools that make everyday life easier. I love solving problems with clean code and creative design.</p>
+            <p>Currently enrolled in Pursuit's AI NATIVE fellowship in New York City, sharpening skills every day through real-world projects and collaborative teamwork.</p>
+            <p>When not coding: exploring the city, reading about tech, and experimenting with new side projects.</p>
+          </div>
+          <div class="dossier">
+            <div class="dossier-title">// VAULT RECORD</div>
+            <div class="dossier-row"><span>NAME</span><span>MITRA KERMANIAN</span></div>
+            <div class="dossier-row"><span>ORIGIN</span><span>NEW YORK CITY</span></div>
+            <div class="dossier-row"><span>PROGRAM</span><span>PURSUIT FELLOWSHIP</span></div>
+            <div class="dossier-row"><span>CLASS</span><span>AI NATIVE</span></div>
+            <div class="dossier-row"><span>OBJECTIVE</span><span>FIRST DEV JOB</span></div>
+            <div class="dossier-row"><span>CLEARANCE</span><span style="color:var(--amber)">LEVEL 5 ★★★★★</span></div>
+            <div class="id-badge">MK</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section reveal" id="skills">
+      <div class="container">
+        <div class="section-id">// FILE_002</div>
+        <div class="section-title">SKILL_MATRIX</div>
+        <div class="section-rule"></div>
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <div class="skill-header"><div class="skill-name">HTML</div><div class="skill-lvl">LVL 9</div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+            <div class="skill-dots">
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header"><div class="skill-name">CSS</div><div class="skill-lvl">LVL 8</div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+            <div class="skill-dots">
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header"><div class="skill-name">JAVASCRIPT</div><div class="skill-lvl">LVL 7</div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+            <div class="skill-dots">
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header"><div class="skill-name">PYTHON</div><div class="skill-lvl">LVL 6</div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div>
+            <div class="skill-dots">
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div><div class="skill-dot"></div><div class="skill-dot"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header"><div class="skill-name">WORDPRESS</div><div class="skill-lvl">LVL 6</div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div>
+            <div class="skill-dots">
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div><div class="skill-dot"></div><div class="skill-dot"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header"><div class="skill-name">GIT & GITHUB</div><div class="skill-lvl">LVL 8</div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+            <div class="skill-dots">
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header"><div class="skill-name">TEAMWORK</div><div class="skill-lvl">LVL 9</div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+            <div class="skill-dots">
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-header"><div class="skill-name">PROBLEM SOLVE</div><div class="skill-lvl">LVL 9</div></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            <div class="skill-dots">
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div>
+              <div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot filled"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section reveal" id="projects">
+      <div class="container">
+        <div class="section-id">// FILE_003</div>
+        <div class="section-title">PROJECT_LOG</div>
+        <div class="section-rule"></div>
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-top">
+              <div class="project-num">01</div>
+              <div class="project-links"><a href="#">⬡ GITHUB</a><a href="#">↗ DEPLOY</a></div>
+            </div>
+            <div class="project-title">BUDGET BUDDY</div>
+            <p class="project-desc">Personal finance tracker. Log income &amp; expenses. Persistent data via localStorage — no backend required.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span><span class="project-tag">CSS</span>
+              <span class="project-tag">JAVASCRIPT</span><span class="project-tag">LOCALSTORAGE</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <div class="project-num">02</div>
+              <div class="project-links"><a href="#">⬡ GITHUB</a><a href="#">↗ DEPLOY</a></div>
+            </div>
+            <div class="project-title">WEATHER NOW</div>
+            <p class="project-desc">Real-time weather via OpenWeather API. Any city. Temperature, humidity, and conditions displayed instantly.</p>
+            <div class="project-tags">
+              <span class="project-tag">JAVASCRIPT</span><span class="project-tag">API</span>
+              <span class="project-tag">ASYNC/AWAIT</span><span class="project-tag">CSS</span>
+            </div>
+          </div>
+
+          <div class="project-card featured">
+            <div class="project-top">
+              <div class="project-num" style="color:var(--green)">03</div>
+              <div class="project-links"><a href="#">⬡ GITHUB</a><a href="#">↗ DEPLOY</a></div>
+            </div>
+            <div class="project-title">PORTFOLIO PAGE</div>
+            <p class="project-desc">This very terminal. Built from scratch. Fallout UI aesthetic. Boot sequence, parallax AI orbs, skill matrix.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span><span class="project-tag">CSS</span>
+              <span class="project-tag">JAVASCRIPT</span><span class="project-tag">DESIGN</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section reveal" id="contact">
+      <div class="container">
+        <div class="section-id">// FILE_004</div>
+        <div class="section-title">TRANSMIT_MSG</div>
+        <div class="section-rule"></div>
+        <div class="contact-block">
+          <p class="contact-msg">Terminal open. Currently seeking opportunities. Whether a question, a project, or just a ping — transmission will be received.</p>
+          <a href="mailto:mitrakermanian1989@gmail.com" class="btn-terminal primary" id="emailBtn">OPEN CHANNEL</a>
+          <div class="contact-links">
+            <a href="https://github.com/mitrakermanian68-spec" target="_blank" class="contact-link">GITHUB</a>
+            <a href="https://www.linkedin.com/in/mitra-kermanian-1989y/" target="_blank" class="contact-link">LINKEDIN</a>
+            <a href="mailto:mitrakermanian1989@gmail.com" class="contact-link">EMAIL</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-copy">COPYRIGHT 2075 ROBCO INDUSTRIES — ALL RIGHTS RESERVED</div>
+      <div class="footer-brand">MITRA<span>.KERMANIAN</span> // PURSUIT FELLOWSHIP</div>
+    </footer>
+
+  </div><!-- end terminal-wrap -->
+
+  <script src="script.js"></script>
+</body>
+</html>
